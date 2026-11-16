@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HootRSStash</title>
+<meta name="description" content="HootRSStash is a local-first RSS and Atom reader for Android. No account, no tracking: your feeds are fetched by your phone and stay on it.">
+<link rel="icon" href="img/icon-192.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <img src="img/icon-192.png" alt="">
+  <a class="name" href="./">HootRSStash</a>
+  <nav><a href="./" aria-current="page">Guide</a><a href="privacy.html">Privacy</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Hoot<span>RSS</span>tash</h1>
+    <p>A local-first RSS and Atom reader for Android. Your feeds are fetched by your phone and stay on it. No account, no tracking.</p>
+    <span class="chip">Coming soon on Google Play · Android 15+</span>
+  </div>
+  <div class="shots">
+    <img src="img/01-articles.png" alt="The article list with images from several feeds">
+    <img src="img/03-actions.png" alt="The owl button opened: show read articles, go to top, mark all as read">
+  </div>
+</div></section>
+
+<main class="wrap">
+  <ul class="features">
+    <li><b>One clean list</b>All your feeds in one list, newest first, with images and site icons. Filter by feed in one tap.</li>
+    <li><b>Private by design</b>No account, no analytics, no ads. Nothing leaves your phone except the requests to the feeds you follow.</li>
+    <li><b>Easy to add</b>Type a site address or share a page from your browser: the app finds the feed.</li>
+    <li><b>Light on your phone</b>Background refresh every few hours, Wi-Fi only if you like, old articles cleaned up automatically.</li>
+  </ul>
+
+  <h2>Add your feeds</h2>
+  <p>Open the menu <b>⋮ → Feeds</b>, then tap <b>Add feed</b>. You can type:</p>
+  <ul>
+    <li>a website address, for example <code>blog.rust-lang.org</code>: the app looks for the site's feed. If the site offers several (articles, comments…), it lets you choose;</li>
+    <li>or a feed address directly, for example <code>https://f-droid.org/feed.xml</code>.</li>
+  </ul>
+  <p>From your browser, you can also use <b>Share → HootRSStash (Add feed)</b> on any page: the Add feed dialog opens with the page's address.</p>
+  <p>Coming from another reader? Use <b>⋮ → Import OPML</b> on the Feeds screen. <b>Export OPML</b> saves your list to a file.</p>
+  <p class="note">HootRSStash only uses secure (<code>https://</code>) addresses. Typing <code>https://</code> is optional; sites that only offer plain <code>http://</code> can't be added.</p>
+
+  <h2>Read</h2>
+  <div class="gallery">
+    <figure><img src="img/01-articles.png" alt="Article list in the dark theme"><figcaption>Unread articles are bold. Tap one to open it in your browser.</figcaption></figure>
+    <figure><img src="img/02-feed-menu.png" alt="The feed filter menu"><figcaption>Tap “All feeds” to show one feed only, with its unread count.</figcaption></figure>
+    <figure><img src="img/03-actions.png" alt="The owl button's actions"><figcaption>The owl button: show or hide read articles, go to top, mark all as read.</figcaption></figure>
+  </div>
+  <ul>
+    <li><b>Mark as read / unread:</b> long-press an article. Opening an article marks it as read.</li>
+    <li><b>Undo:</b> after marking articles as read, an Undo button stays at the bottom left for a few seconds.</li>
+    <li><b>Search:</b> <b>⋮ → Search</b> finds articles by title (accents don't matter).</li>
+    <li><b>Image preview:</b> press and hold a thumbnail to see the image larger.</li>
+  </ul>
+
+  <h2>Refresh</h2>
+  <p>Pull the list down to refresh now. The app also refreshes in the background (every 3 hours by default), and opening the app refreshes it too. When new articles arrive, a <b>“Hoot! N new articles”</b> banner tells you how many.</p>
+  <p>If a feed can't be refreshed, the Feeds screen shows a red warning badge on its icon, with the reason below (site not reachable, not a feed, error code from the site…).</p>
+
+  <h2>Settings</h2>
+  <div class="gallery">
+    <figure><img src="img/04-feeds.png" alt="The Feeds screen"><figcaption>Feeds: rename or delete a feed with a tap on it.</figcaption></figure>
+    <figure><img src="img/05-settings.png" alt="The Settings screen"><figcaption>Settings: refresh, storage and appearance.</figcaption></figure>
+    <figure><img src="img/06-articles-light.png" alt="Article list in the light theme"><figcaption>Light, Dark, and true Black for OLED screens.</figcaption></figure>
+  </div>
+  <dl>
+    <dt>Background refresh · Wi-Fi only</dt><dd>How often feeds are refreshed in the background, and whether to wait for Wi-Fi.</dd>
+    <dt>Keep articles for · Max articles per feed</dt><dd>Older articles are removed automatically (30 days and 250 per feed by default) so the app stays small.</dd>
+    <dt>Theme</dt><dd>System default, Light, Dark or Black.</dd>
+    <dt>Show images</dt><dd>When off, no image is downloaded: the list shows text and letter icons only.</dd>
+    <dt>Title lines</dt><dd>How many lines of each title the list shows.</dd>
+  </dl>
+
+  <h2>Questions</h2>
+  <dl>
+    <dt>Does it sync between devices?</dt><dd>No. Everything stays on the phone. Use Export OPML / Import OPML to move your feed list.</dd>
+    <dt>Where is my data?</dt><dd>On your phone only. See the <a href="privacy.html">privacy policy</a> for details, including Android's own backup.</dd>
+    <dt>Does it show full articles?</dt><dd>Articles open in your default browser, on the publisher's site.</dd>
+    <dt>A site doesn't work.</dt><dd>Check that it offers an RSS or Atom feed over https. If it does and still fails, <a href="https://github.com/anthonyda/hootrsstash-site/issues">open an issue</a>.</dd>
+  </dl>
+</main>
+
+<footer><div class="wrap">
+  <span>HootRSStash</span><a href="privacy.html">Privacy policy</a><a href="https://github.com/anthonyda/hootrsstash-site/issues">Contact</a>
+  <span>Example feeds in the screenshots: Godot Engine, OpenStreetMap Blog, F-Droid, Python Insider, Rust Blog.</span>
+</div></footer>
+</body>
+</html>
